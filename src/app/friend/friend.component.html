@@ -1,0 +1,58 @@
+<p>friend works!</p>
+<!-- <div class="container w-100 p-5 mb-3 shadow rounded-1 pt-3">
+    <form>
+        <input type="file" class="form-control my-2" name="image" (change)="handleprofilePic($event)" placeholder="image">
+        <input type="text" class="form-control my-2" name="name" placeholder="name" [(ngModel)]="name">
+        <div class="text-center">
+            <button class="btn btn-primary" (click)="mydata()">submit</button>
+
+        </div>
+    
+    </form>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <input type="text" name="name"  [(ngModel)]="searchItem" id="name"
+                class="form-control m-2">
+            <button class="btn btn-primary m-3" (click)="search()">Search</button>
+        </div>
+    </div>
+</div>
+
+<!-- {{users|json}} -->
+
+<ng-container *ngFor="let u of myusers">
+    {{u.username}}
+    <!-- <div class="container my-2 ">
+
+        <div class="col-md-4">
+            <div class="card rounded">
+                <div class="card-body mb-1">
+                    <div class="row">
+                        <div class="col d-flex align-items-around">
+                            <div class="col image-post">
+                                <img src="{{ u.image }}" class="rounded-circle" style="width: 50px; height: 50px;"
+                                    alt="user profile image">
+
+                            </div>
+                            <div class="col col-md-9 details mx-2">
+                                <p class="small fw-bold mb-1">{{ u.name }}</p>
+                                <button class="btn btn-primary" (click)="follow()" *ngIf="toggle">follow</button>
+                                <button class="btn btn-secondary" (click)="follow()" *ngIf="!toggle">Unfollow</button>
+
+
+                            </div>
+
+                            <div clas="row card-title-icon">
+                                <mat-icon>settings</mat-icon>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</ng-container>

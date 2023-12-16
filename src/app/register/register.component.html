@@ -1,0 +1,60 @@
+
+<section class="mx-3">
+    <div class="container-fluid " >
+        <div class="row align-items-center" style="height: 670px !important;background: white;border-radius: 30px;">
+            <div class="col-md">
+                <div class="container">
+                    <img src="https://i.ibb.co/xD98NFH/undraw-Social-life-re-x7t5.png" alt="" class="img-fluid" >
+            
+                </div>
+            </div>
+            
+            <div class="col-md">
+                <div class="container shadow rounded-3 col-md-9">
+                    <div class="row p-4">
+                      
+                        <div class="col-md">
+                            <h2 class="fw-bold my-1">Create Account</h2>
+                            <!-- <p class="fs-6 fw-normal">Please login to continue</p> -->
+    
+                            <form action="">
+                                <div class="form-row">
+                                    <div class="my-3">
+                                        <input type="text" name="name" placeholder="name" class="form-control" [(ngModel)]="user.name" id="">
+
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="my-3">
+                                        <input type="email" name="email" placeholder="email" class="form-control " [(ngModel)]="user.email" id="">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="my-3">
+                                        <input type="text" name="username" placeholder="username" class="form-control" [(ngModel)]="user.username" id="">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="my-3">
+                                        <input type="password" name="password" class="form-control" placeholder="password" [(ngModel)]="user.password" id="">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="my-2 mb-3">
+                                        <button class="btn btn-primary w-100" (click)="mydata()">Submit</button>
+                                    </div>
+                                </div>
+                                <p>Already have account ? <a routerLink="/login">Login here</a></p>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      
+       
+    </section> 
+

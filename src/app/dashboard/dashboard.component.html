@@ -1,0 +1,119 @@
+<app-navbar [user]="user" ></app-navbar>
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Create Post
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col">
+                        <input type="text" name="location" class="form-control m-3" [(ngModel)]="location" placeholder="location" id="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="file" name="post" class="form-control m-3" (change)="handlepost($event)" id="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" name="caption" class="form-control m-3" [(ngModel)]="caption" placeholder="caption" id="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-dark m-3" (click)="mydata()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+<!-- {{myusers|json}} -->
+  <!-- {{friends|json}} -->
+
+<div class="container">
+    <div class="row ">
+        
+        <ng-container *ngFor="let u of users; let i=index;">
+            <div class="col-md-4 my-2 pt-3">
+                <div class="card rounded">
+                    <div class="card-body mb-1">
+                        <div class="row">
+                            <div class="col d-flex align-items-around">
+                                <div class="col image-post">
+                                    <img src="{{ findByUser( u.user)?.dp }}" class="rounded-circle" style="width: 50px; height: 50px;" alt="user profile image">
+                                </div>
+                                <div class="col col-md-9 details mx-2">
+                                    <p class="small fw-bold mb-1">{{ u.name }}</p>
+                                    <p class="card-text fst-normal mb-1">{{ u.location }}</p>
+                                </div>
+                                <div class="col card-title-icon" >
+                                    
+                                    <mat-icon mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">more_vert</mat-icon>
+                                      
+                                      <mat-menu #menu="matMenu">
+                                        <button mat-menu-item>
+                                          <mat-icon>dialpad</mat-icon>
+                                          <span>Redial</span>
+                                        </button>
+                                        <button mat-menu-item >
+                                          <mat-icon (click)="deleteUser(u.id)">delete</mat-icon>
+                                          <span>Delete Post</span>
+                                        </button>
+                                        <button mat-menu-item>
+                                          <mat-icon>notifications_off</mat-icon>
+                                          <span>Disable alerts</span>
+                                        </button>
+                                    </mat-menu>
+                                </div>
+                                
+                                 
+                                  
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="card-body" style="width: 21rem;">
+                        <img src="{{u.image1}}" class="card-img-top mx-auto d-block" alt="..." width="100%" height="100%" style="margin: -1;">
+                        <div class="card-body">
+                            <div class="row d-flex align-items-around">
+                                <div class="col">
+                                    
+                                    <mat-icon (click)="change(i,u.id)" class="text-danger" *ngIf="u.heart">favorite </mat-icon>
+                                    <mat-icon (click)="change(i,u.id)" *ngIf="!u.heart">favorite_border </mat-icon>
+                                    <!-- {{ findByUser(u.user)?.id }} -->
+                                    
+                                    
+                                    <mat-icon class="mx-2">chat_bubble</mat-icon>
+                                    <mat-icon>send</mat-icon>
+                                </div>
+                                <div class="col col-md-1">
+                                    <mat-icon>bookmark_border</mat-icon>
+                                </div>
+                            </div>
+                          <p class="card-text fw-bold min-font-size">{{u.name}} <span class="fw-normal mx-1">{{u.caption}}</span></p>
+                        </div>
+                      </div>
+                      
+                </div>
+
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+

@@ -1,0 +1,94 @@
+<!-- <p>login works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <input type="text" name="username" placeholder="username" class="form-control m-3" [(ngModel)]="user.username" id="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="password" name="password" placeholder="password" class="form-control m-3" [(ngModel)]="user.password" id="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary m-3" (click)="login()">Submit</button>
+        </div>
+    </div>
+</div> -->
+
+<!-- Second Design -->
+
+<!-- <div class="container-fluid mt-5 pt-5">
+    <div class="row">
+        <div class="col-12 col-sm-8 col-md-6 m-auto">
+            <div class="card border-0 shadow">
+                <div class="card-body">
+                    <svg class="mx-auto my-3 center-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
+                    <form action="">
+                        <input type="text" name="username" placeholder="username" class="form-control my-4 py-2" [(ngModel)]="user.username" id="">
+                        <input type="password" name="password" placeholder="password" class="form-control my-4 py-2" [(ngModel)]="user.password" id="">
+                        <div class="text-center mt-3">
+                            <button class="btn btn-outline-primary" (click)="login()">Login</button>                       
+                        </div>   
+                        <p class="text-center mt-2">Don't have account ? <a href="http://localhost:4200/register">Register here</a></p>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div> -->
+<!-- "https://i.ibb.co/xD98NFH/undraw-Social-life-re-x7t5.png" col-md-6 shadow rounded-3-->
+<section class="mx-3">
+<div class="container-fluid " >
+    <div class="row align-items-center" style="height: 670px !important;background: white;border-radius: 30px;">
+        <div class="col-md">
+            <div class="container">
+                <img src="https://i.ibb.co/xD98NFH/undraw-Social-life-re-x7t5.png" alt="" class="img-fluid" >
+        
+            </div>
+        </div>
+        
+        <div class="col-md">
+            <div class="container shadow rounded-3 col-md-7">
+                <div class="row p-4">
+                  
+                    <div class="col-md">
+                        <h2 class="fw-bold my-1">Login</h2>
+                        <p class="fs-6 fw-normal">Please login to continue</p>
+
+                        <form action="">
+                            <div class="form-row">
+                                <div class="my-3">
+                                    <input type="text" name="username" placeholder="username" class="form-control" [(ngModel)]="user.username" id="">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="my-3">
+                                    <input type="password" name="password" placeholder="password" class="form-control" [(ngModel)]="user.password" id="">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="my-2 mb-3">
+                                    <button class="btn btn-primary w-100" (click)="login()">Login</button>
+                                </div>
+                            </div>
+                            <p>Don't have account ? <a routerLink="/register">Register here</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+   
+</section> 

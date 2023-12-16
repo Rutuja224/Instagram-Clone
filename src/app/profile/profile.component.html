@@ -1,0 +1,85 @@
+<app-navbar></app-navbar>
+<div class="container-fluid w-50 p-5 shadow rounded-1 pt-3" style="height: 650px !important;">
+    <div class="row my-2">
+        <div class="col-md">
+            <div class="row  my-2">
+                <div class="col">
+                    <p class="fs-6 text-center">Edit Profile</p>
+
+                </div>
+            </div>
+            <form class="example-form">
+                <div class="row">
+                    <div class="col image-post text-center">
+                        <!-- app.component.html -->
+
+                        <div *ngIf="!image">
+                            <img src="https://i.ibb.co/k4BbZRv/user.jpg" alt="no_user" class="rounded-circle" style="width: 70px; height: 70px;">
+                        </div>
+                        <div *ngIf="image">
+                            <img [src]="image" class="rounded-circle" style="width: 100px; height: 100px;" alt="user profile image">
+                        </div>
+  
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col">
+                        <input type="file" name="profilePicture" class="form-control" (change)="handleprofilePic($event)" id="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <!-- <mat-form-field class="example-full-width">
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+                            
+                          </mat-form-field> -->
+                          <mat-form-field style="width: 100%;">
+                            <mat-label>Name</mat-label>
+                            <input matInput name="name" [(ngModel)]="user.name">
+                          </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field style="width: 100%;">
+                            <mat-label>Email</mat-label>
+                            <input matInput name="email" [(ngModel)]="user.email">
+                          </mat-form-field>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field style="width: 100%;">
+                            <mat-label>Username</mat-label>
+                            <input matInput name="username" [(ngModel)]="user.username">
+                          </mat-form-field>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field style="width: 100%;">
+                            <mat-label>Gender</mat-label>
+                            <mat-select [(ngModel)]="user.gender">
+                              <mat-option value="female">Female</mat-option>
+                              <mat-option value="male">Male</mat-option>
+                              <mat-option value="other">Prefer not to say</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col">
+                        <button class="btn btn-primary m-3" (click)="mydata()">Submit</button>
+                    </div>
+                </div>
+
+                
+            </form>
+              
+        </div>
+    </div>
+</div>
